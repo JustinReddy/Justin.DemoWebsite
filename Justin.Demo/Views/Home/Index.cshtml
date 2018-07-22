@@ -1,0 +1,145 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="/css/home.css">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="/stylesheets/home.css" asp-append-version="true" />
+
+    </environment>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+</head>
+<body>
+    <div class="container">
+        <div id="landing-wrapper">
+            <div id="landing-name" class="row">
+                <div class="col-md-12">
+                    <h1><em>&lt;welcome&gt;</em><span class="shadow">Justin.Reddy.co.za</span><em>&lt;/welcome&gt;</em></h1>
+                </div>
+
+            </div>
+            <div id="landing-header" class="row">
+                <div class="col col-md-3">
+                    <img id="profilepic" src="~/images/home/Profile Pic.jpg" class="img-responsive img-circle" />
+                </div>
+                <div id="landing-intro-paragraph" class="col-md-7">
+                    <p>
+                        Hello! My name is <strong>Justin Reddy</strong> and I am a South African based Full Stack Developer.
+                    </p>
+                    <p>
+                        This website is built to showcase the Technology Stack that I work on. There are also many POC's compiled to
+                        to tutorialize some concepts. Starting with this website, what you are seeing is a .Net Core 2.0 MVC website hosted on Linux
+                        (<span class="glyphicon glyphicon-random"></span>&nbsp;&nbsp;Microsoft built website running in a Linux platform?).
+                    </p>
+                    <p>
+                        If technology and software development interests you, subscribe to my website. You will have access to various topics that I have researched and documented.
+                    </p>
+                    <p class="pull-right">
+                        <a href="#" class="btn btn-success btn-lg">Subscribe <span class="glyphicon glyphicon-hand-right"></span></a>
+                        <a href="#" class="btn btn-success btn-lg"  data-toggle="modal" data-target="#popUpWindow">Sign In <span class="glyphicon glyphicon-log-in"></span></a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <div class="container">
+        <div class="modal fade" id="popUpWindow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Login Form</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email" />
+                                <input type="password" class="form-control" placeholder="Password" />
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-block">Log In</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+                asp-fallback-src="~/lib/modernizr/modernizr.min.js"
+                crossorigin="anonymous">
+        </script>
+
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+</body>
+</html>
