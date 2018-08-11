@@ -83,3 +83,10 @@ canvas {
 #welcome-header {
     color: white;
 }
+
+#popUpWindow {
+    top: 20%;
+}
+#registration-popUpWindow {
+    top: 20%;
+}
