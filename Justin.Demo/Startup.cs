@@ -29,7 +29,7 @@ namespace Justin.Demo
         {
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
+                //app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -39,11 +39,9 @@ namespace Justin.Demo
 
             app.UseStaticFiles();
 
-            app.UseMvc(routes =>
+            app.UseEndpoints(routes =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRazorPages();
             });
         }
     }
